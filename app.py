@@ -4,6 +4,9 @@ import pdfplumber
 import pandas as pd
 import re
 from datetime import datetime
+from dotenv import load_dotenv
+
+load_dotenv()  # .envファイルを読み込む
 
 app = Flask(__name__)
 UPLOAD_FOLDER = "uploads"
@@ -168,3 +171,6 @@ def index():
         return send_file(output_excel_path, as_attachment=True)
         
     return render_template("index.html")
+
+if __name__ == "__main__":
+    app.run(debug=True)
