@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>所属別リザルト抽出</title>
+</head>
+<body>
+    <h2>PDF・名簿をアップロードして所属を指定</h2>
+    <form action="/" method="post" enctype="multipart/form-data">
+        <p>リザルトPDF: <input type="file" name="pdf" required></p>
+        <p>名簿Excel: <input type="file" name="excel" required></p>
+        <p>所属名: <input type="text" name="team" required placeholder="例: 東北大">
+        </p>
+        <p>出力ファイル名（拡張子不要）: 
+            <input type="text" name="output_name" required placeholder="例: 学連春季2025">
+        </p>
+        <input type="submit" value="変換してダウンロード">
+    </form>
+</body>
+</html>
